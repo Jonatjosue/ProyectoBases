@@ -1,0 +1,95 @@
+body {
+    overflow-x: hidden;
+}
+
+.sidebar {
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    background-color: #343a40;
+    padding: 20px 0;
+}
+
+.sidebar a {
+    color: white;
+    padding: 10px 15px;
+    text-decoration: none;
+    display: block;
+}
+
+.sidebar a:hover {
+    background-color: #495057;
+}
+
+.main-content {
+    margin-left: 250px;
+    /* Ancho de la sidebar */
+    padding: 20px;
+}
+
+.statistics {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 20px;
+}
+
+.stat-card {
+    background-color: #f8f9fa;
+    border: 1px solid #ced4da;
+    border-radius: 5px;
+    padding: 20px;
+    text-align: center;
+    flex: 1;
+    margin: 0 10px;
+}
+
+.stat-card h3 {
+    margin: 0;
+    font-size: 24px;
+}
+
+.stat-card p {
+    font-size: 18px;
+    color: #6c757d;
+}
+
+.table-responsive {
+    margin-top: 20px;
+    /* Espaciado superior */
+}
+
+.table {
+    text-align: center;
+    width: 100%;
+    /* Asegura que la tabla ocupe todo el ancho del contenedor */
+    border-radius: 0.5rem;
+    /* Bordes redondeados */
+    overflow: hidden;
+    /* Para bordes redondeados */
+}
+
+.table-striped tbody tr:nth-of-type(odd) {
+    background-color: #f2f2f2;
+    /* Color de fondo alternativo */
+}
+
+.table-bordered {
+    border: 1px solid #dee2e6;
+    /* Bordes de la tabla */
+}
+
+.table-dark th {
+    background-color: #343a40;
+    /* Color de fondo de la cabecera */
+    color: #fff;
+    /* Color del texto en la cabecera */
+}
+
+.table-dark td,
+.table-dark th {
+    border: 1px solid #495057;
+    /* Bordes para las celdas */
+}
+
