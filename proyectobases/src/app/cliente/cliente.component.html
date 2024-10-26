@@ -21,7 +21,7 @@
     </div>
     <div class="main-content">
         <h1 class="text-center">Gestión de Clientes</h1>
-    
+
         <h2 class="mt-4">Historial de Acciones</h2>
         <div class="table-responsive">
             <table class="table table-striped table-bordered">
@@ -61,8 +61,143 @@
                 </tbody>
             </table>
         </div>
+
+
+        <h2 class="mt-4">Operaciones</h2>
+        <div class="crud-container">
+            <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#createClientModal">Crear
+                Cliente</button>
+            <button class="btn btn-secondary" data-bs-toggle="modal" data-bs-target="#modifyClientModal">Modificar
+                Cliente</button>
+            <button class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#deleteClientModal">Eliminar
+                Cliente</button>
+            <button class="btn btn-info" data-bs-toggle="modal" data-bs-target="#consultClientModal">Consultar
+                Clientes</button>
+        </div>
+
+        <!-- Modal para Crear Cliente -->
+        <div class="modal fade" id="createClientModal" tabindex="-1" aria-labelledby="createClientModalLabel"
+            aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="createClientModalLabel">Crear Cliente</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <form id="createClientForm">
+                            <div class="mb-3">
+                                <label for="clientName" class="form-label">Nombre del Cliente</label>
+                                <input type="text" class="form-control" id="clientName" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="clientEmail" class="form-label">Email</label>
+                                <input type="email" class="form-control" id="clientEmail" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="clientPhone" class="form-label">Teléfono</label>
+                                <input type="tel" class="form-control" id="clientPhone" required>
+                            </div>
+                            <button type="submit" class="btn btn-primary">Guardar</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Modal para Modificar Cliente -->
+        <div class="modal fade" id="modifyClientModal" tabindex="-1" aria-labelledby="modifyClientModalLabel"
+            aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="modifyClientModalLabel">Modificar Cliente</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <form id="modifyClientForm">
+                            <div class="mb-3">
+                                <label for="modifyClientId" class="form-label">ID del Cliente</label>
+                                <input type="number" class="form-control" id="modifyClientId" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="modifyClientName" class="form-label">Nuevo Nombre</label>
+                                <input type="text" class="form-control" id="modifyClientName" required>
+                            </div>
+                            <button type="submit" class="btn btn-primary">Actualizar</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Modal para Eliminar Cliente -->
+        <div class="modal fade" id="deleteClientModal" tabindex="-1" aria-labelledby="deleteClientModalLabel"
+            aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="deleteClientModalLabel">Eliminar Cliente</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <form id="deleteClientForm">
+                            <div class="mb-3">
+                                <label for="deleteClientId" class="form-label">ID del Cliente</label>
+                                <input type="number" class="form-control" id="deleteClientId" required>
+                            </div>
+                            <button type="submit" class="btn btn-danger">Eliminar</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Modal para Consultar Clientes -->
+        <div class="modal fade" id="consultClientModal" tabindex="-1" aria-labelledby="consultClientModalLabel"
+            aria-hidden="true">
+            <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="consultClientModalLabel">Consultar Clientes</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="table-responsive">
+                            <table class="table table-striped table-bordered">
+                                <thead class="table-dark">
+                                    <tr>
+                                        <th>ID</th>
+                                        <th>Nombre</th>
+                                        <th>Email</th>
+                                        <th>Teléfono</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>1</td>
+                                        <td>Juan Pérez</td>
+                                        <td>correo de ejemplo</td>
+                                        <td>123-456-7890</td>
+                                    </tr>
+                                    <tr>
+                                        <td>2</td>
+                                        <td>María López</td>
+                                        <td>correo de ejemplo</td>
+                                        <td>987-654-3210</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <button class="btn btn-success" id="exportPDF">Exportar a PDF</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
     </div>
-    
+
 
     <!-- Scripts -->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
