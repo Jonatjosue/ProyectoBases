@@ -12,8 +12,8 @@ export const routes: Routes = [
   {path: 'menu', component: MenuComponent},
   {path: 'admin', component: AdminComponent},
   {path: 'admin/cliente', component: ClienteComponent},
-  {path: 'admin/empleado', component: ClienteComponent},
-  {path: 'admin/vehiculo', component: ClienteComponent},
+  {path: 'admin/empleado', component: EmpleadoComponent},
+  {path: 'admin/vehiculo', component: VehiculoComponent},
   {path: 'admin/agencia', component: AgenciaComponent}
 
 ];
